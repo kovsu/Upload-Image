@@ -41,7 +41,7 @@ let times = ref(0);
 
 <style lang="scss">
 .header {
-  padding: 3rem 8rem;
+  padding: 2rem 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
