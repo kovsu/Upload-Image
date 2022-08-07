@@ -119,6 +119,10 @@ let clean = computed(() => {
     box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.15);
   }
 
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
   svg {
     margin-right: 1rem;
   }

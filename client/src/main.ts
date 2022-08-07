@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "./main.css";
 import App from "./App.vue";
+import { router } from "./router";
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -32,4 +33,7 @@ library.add(
   faCheck
 );
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
+createApp(App)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .use(router)
+  .mount("#app");

@@ -13,6 +13,10 @@ let times = ref(0);
     <div class="header__logo">
       <p>Upload Image</p>
     </div>
+    <div class="header__center">
+      <router-link to="/">Upload</router-link>
+      <router-link to="/images">Images</router-link>
+    </div>
     <div class="header__operations">
       <button class="header__btn">
         <a href="https://github.com/kovsu/upload-image" target="_blank">
@@ -43,9 +47,23 @@ let times = ref(0);
 .header {
   padding: 2rem 8rem;
   display: flex;
-  justify-content: space-between;
+  gap: 10rem;
   align-items: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+
+  &__center {
+    margin-right: auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: rgba(128, 128, 128, 0.5);
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
 
   &__operations {
     display: flex;
@@ -88,5 +106,9 @@ let times = ref(0);
   flex-direction: column;
   font-size: 0.8em !important;
   transition: all 0.5s;
+}
+
+.router-link-active {
+  color: inherit !important;
 }
 </style>

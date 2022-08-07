@@ -13,3 +13,17 @@ export const uploadImage = async (filedname: File) => {
 
   return data;
 };
+
+export const getAll = async () => {
+  const resp = await fetch(baseUrl + "/allImages");
+  const data = await resp.json();
+  
+  return data;
+};
+
+export const deleteImage = async (filedname: string) => {
+  const resp = await fetch(baseUrl + "/delete/" + filedname);
+  const data = await resp.json();
+
+  return data;
+};
