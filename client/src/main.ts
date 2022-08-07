@@ -10,9 +10,26 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 /* import specific icons */
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faMountain, faSun, faMoon, faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMountain,
+  faSun,
+  faMoon,
+  faCloudArrowUp,
+  faMinus,
+  faUpload,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faMountain, faSun, faMoon, faGithub, faCloudArrowUp);
+library.add(
+  faMountain,
+  faSun,
+  faMoon,
+  faGithub,
+  faCloudArrowUp,
+  faMinus,
+  faUpload,
+  faCheck
+);
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
