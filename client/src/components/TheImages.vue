@@ -57,8 +57,18 @@ let showImages = computed(() => {
 });
 
 function copy(str: string) {
-  navigator.clipboard.writeText(str);
+  const textArea = document.createElement("textarea");
+  textArea.value = str;
+  // 使text area不在viewport，同时设置不可见
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
   alert("复制成功");
+  return new Promise<void>((res, rej) => {
+    // 执行复制命令并移除文本框
+    document.execCommand("copy") ? res() : rej();
+    textArea.remove();
+  });
 }
 
 async function deleteImageByName(str: string) {
